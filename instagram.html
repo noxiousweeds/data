@@ -26,13 +26,9 @@
 
 <script type="text/javascript">
   var feed = new Instafeed({
-    get: 'popular',
+    get: 'tagged',
+	tagName: 'noxiousweeds'
     ClientId: '4a2e14e502d8423d8bba6f17cdc7ab37',
-    resolution: 'standard_resolution',
-    template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /></a>',
-    sortBy: 'most-recent',
-    limit: 4,
-    links: false
   });
   feed.run();
 </script>
