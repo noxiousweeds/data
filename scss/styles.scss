@@ -15,7 +15,7 @@ $transition: all .17s cubic-bezier(.4, 0, 1, 1);
 }
   
 .image-item {
-  animation-name:slide-item .3s ease forwards;
+  animation:slide-item .3s ease forwards;
   box-sizing: border-box;
   flex: 1 0 33%;
   transform: translateY(250px);
