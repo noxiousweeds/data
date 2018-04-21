@@ -10,6 +10,26 @@
 
 <div id="instafeed" class="w3-content w3-section" style="max-width:500px"></div>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 2000);
+}
+    });
+</script>
+
+
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function() {
   var instafeed = new Instafeed({
@@ -31,24 +51,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-var slideIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none"; 
-    }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1} 
-    x[slideIndex-1].style.display = "block"; 
-    setTimeout(carousel, 2000);
-}
-    });
-</script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
 		<script src="js/vendor/modernizr-3.5.0.min.js"></script>
