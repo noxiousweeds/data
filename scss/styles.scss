@@ -15,7 +15,7 @@ $transition: all .17s cubic-bezier(.4, 0, 1, 1);
 }
   
 .image-item {
-  animation: slide-item .3s ease forwards;
+  animation-name:slide-item .3s ease forwards;
   box-sizing: border-box;
   flex: 1 0 33%;
   transform: translateY(250px);
@@ -40,3 +40,13 @@ $transition: all .17s cubic-bezier(.4, 0, 1, 1);
   display: block;
  }
 }
+
+@keyframes slide-item {
+ 60% { 
+ transform: translateY(-10px);
+ }
+ 100% {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+    }}
