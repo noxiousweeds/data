@@ -2,17 +2,29 @@
 <title>Instafeed</title>
 <head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-<style>
-.myslides {display:none;}
-</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<div id="instafeed" class="w3-content w3-section" style="max-width:500px"></div>
 
+<div class="container">
+  <h2>Carousel Example</h2>  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div id="instafeed" class="carousel-inner"></div>
+  </div>
+</div>
 
 <script type="text/javascript">
   var instafeed = new Instafeed({
@@ -22,28 +34,11 @@
 	target: 'instafeed',
     accessToken: '5605056988.53777ee.c311001fcff444e68b30ccc37d59e529',
 	resolution: 'standard_resolution',
-    template: '<img class="myslides" src="{{image}}" style="width:100%">',
+    template: '<div class="item" <img src="{{image}}" style="width:100%"> </div>',
     sortBy: 'most-recent',
-    limit: 4
+    limit: 33
 
    });
-    
-   instafeed.run();
-
-    var slideIndex = 0;
-    carousel();
-
-    function carousel() {
-        var i;
-        var x = document.getElementsByClassName("myslides");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none"; 
-        }
-        slideIndex++;
-        if (slideIndex > x.length) {slideIndex = 1} 
-        x[slideIndex-1].style.display = "block"; 
-        setTimeout(carousel, 2000);
-    }
 </script>
 
     </body>
