@@ -4,6 +4,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <style>
 .mySlides {display:none;}
 </style>
@@ -13,13 +14,12 @@
 <div id="instafeed" class="w3-content w3-section" style="max-width:500px"></div>
 
 <script>
-document.addEventListener("Load", function() {
 var slideIndex = 0;
 carousel();
 
 function carousel() {
     var i;
-    var x = document.getElementsByClassName("mySlides");
+    var x = document.getElementsByClassName("myslides");
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "none"; 
     }
@@ -28,7 +28,6 @@ function carousel() {
     x[slideIndex-1].style.display = "block"; 
     setTimeout(carousel, 2000);
 }
-       });
 </script>
 
 
