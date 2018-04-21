@@ -11,7 +11,7 @@
 <div id="instafeed" class="w3-content w3-section" style="max-width:500px"></div>
 
 <script type="text/javascript">
-
+document.addEventListener("DOMContentLoaded", function() {
   var instafeed = new Instafeed({
     get: 'user',
 	userId: '5605056988',
@@ -28,6 +28,7 @@
    });
     
    instafeed.run();
+    });
 </script>
 
 <script>
