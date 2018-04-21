@@ -1,11 +1,14 @@
 <!doctype html>
 <title>Instafeed</title>
-<head>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+
 <body>
 
-<div id="instafeed"></div>
+<div id="instafeed" class="w3-content w3-section" style="max-width:500px"></div>
 
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function() {
@@ -17,17 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	target: 'instafeed',
     accessToken: '5605056988.53777ee.c311001fcff444e68b30ccc37d59e529',
 	resolution: 'standard_resolution',
-    template: '<div class="image-item">' +
-    '<a class="image insta-image" href="{{image}}">' +
+    template: '<div class="myslides">' +
+    '<a href="{{image}}">' +
     '<img src="{{image}}">' +
-    '<div class="img-backdrop-tutorial">' +
-    '<div class="insta-caption">' +
-    '<p>{{caption}}</p>' +
-    '</div>' +
-    '</div>' +
-    '<div class="captions">' +
-    '<a></a>' +
-    '</div>' +
     '</a>' +
     '</div>'
 
@@ -37,6 +32,23 @@ document.addEventListener("DOMContentLoaded", function() {
    
 });
 </script>
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+</script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
 		<script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
