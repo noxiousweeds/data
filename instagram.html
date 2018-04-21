@@ -28,12 +28,7 @@
     template: '<img src="{{image}}" width="100%" height="300">',
     sortBy: 'most-recent',
     limit: 3
-
-   });
-</script>
-
-<script>
-$(document).ready((function(){
+    after: function(){
         var imgLen = document.getElementById('instafeed');
         var images = imgLen.getElementsByTagName('img');
         var counter = 1;
@@ -49,7 +44,8 @@ $(document).ready((function(){
                 }
             },4000);
         }
-})());
+}
+   });
 </script>
 
 
