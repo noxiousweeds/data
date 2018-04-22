@@ -1,23 +1,13 @@
 <!doctype html>
 <title>Instafeed</title>
 <head>
-    <style>
-        .container{
-            position:relative;
-            width:100%;
-            height:300px;
-            border-radius:5px;
-            border:1px solid red;
-            overflow:hidden;
-        }
-    </style>
-<script type="text/javascript" src="js/instafeed.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
-<div id="instafeed" class="container"></div>
-<script type="text/javascript">
+
+<div id="instafeed"></div>
+
+ <script type="text/javascript">
   var instafeed = new Instafeed({
     get: 'user',
 	userId: '5605056988',
@@ -27,28 +17,18 @@
 	resolution: 'standard_resolution',
     template: '<img src="{{image}}" width="100%" height="300">',
     sortBy: 'most-recent',
-    limit: 3,
-    after: function(){
-                var imgLen = document.getElementById('instafeed');
-                var images = imgLen.getElementsByTagName('img');
-                var counter = 1;
-
-                if(counter <= images.length){
-                    setInterval(function(){
-                        images[0].src = images[counter].src;
-                        console.log(images[counter].src);
-                        counter++;
-
-                        if(counter === images.length){
-                            counter = 1;
-                        }
-                    },4000);
-                }
-        }
+    limit: 4,
+    after: function() {
+      $('#instafeed').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 4
+      });
+    }
    });
 </script>
-
-
-
-    </body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/instafeed.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
 </html>
