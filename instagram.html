@@ -53,9 +53,11 @@
         resolution: 'standard_resolution',
         template: '<div><a href="{{link}}"><img src="{{image}}" /></a>"{{caption}}"</div>',
         limit: 4,
+        sortBy: 'most-recent',
         after: function(){
         $('.single-item').slick({
             autoplay: true,
+            arrows: false,
             infinite: true,
             dots: true,
             autoplaySpeed: 10000
