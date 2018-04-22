@@ -54,7 +54,8 @@
         template: '<div><a href="{{link}}"><img src="{{image}}" /></a></div>',
         limit: 4,
         after: function () {
-        $('.single-item').slick();
+        $('.single-item').slick(slickplay);
+            autoplay: true
     }
     });
 
