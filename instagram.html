@@ -54,12 +54,13 @@
         template: '<div><a href="{{link}}"><img src="{{image}}" /></a></div>',
         limit: 4,
         after: function () {
-        $('.single-item').slick();
-            autoplay: true
-            infinite: true
+        $('.single-item').slick({
+            autoplay: true,
+            infinite: true,
             dots: true
-    }
     });
+    };
+        });
 
 
     feed.run();
