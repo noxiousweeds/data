@@ -42,9 +42,37 @@
         accessToken: '5605056988.53777ee.c311001fcff444e68b30ccc37d59e529',
         target: 'feed',
         resolution: 'standard_resolution',
-        template: '<div><a href="{{link}}"><img src="{{image}}" /></a> </br> "{{model.created_time}}" "{{caption}}"</div>',
+        template: '<div><a href="{{link}}"><img src="{{image}}" /></a> </br> {{model.created_time}} "{{caption}}"</div>',
         limit: 4,
         sortBy: 'most-recent',
+        filter: function(image) {
+
+		var date = new Date(image.created_time*1000);
+
+		m = date.getMonth();
+		d = date.getDate();
+		y = date.getFullYear();
+
+		var month_names = new Array ( );
+		month_names[month_names.length] = "Jan";
+		month_names[month_names.length] = "Feb";
+		month_names[month_names.length] = "Mar";
+		month_names[month_names.length] = "Apr";
+		month_names[month_names.length] = "May";
+		month_names[month_names.length] = "Jun";
+		month_names[month_names.length] = "Jul";
+		month_names[month_names.length] = "Aug";
+		month_names[month_names.length] = "Sep";
+		month_names[month_names.length] = "Oct";
+		month_names[month_names.length] = "Nov";
+		month_names[month_names.length] = "Dec";
+
+		var thetime = month_names[m] + ' ' + d + ' ' + y;
+
+		image.created_time = thetime;
+
+		return true;
+	},
         after: function(){
         $('.single-item').slick({
             autoplay: true,
