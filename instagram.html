@@ -1,12 +1,12 @@
-<!doctype html>
+<html>
 <title>Instafeed</title>
 <head>
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 
-<div id="instafeed"></div>
+    <div id="instafeed"></div>
 
  <script type="text/javascript">
      $(document).ready(function(){
@@ -17,7 +17,7 @@
 	target: 'instafeed',
     accessToken: '5605056988.53777ee.c311001fcff444e68b30ccc37d59e529',
 	resolution: 'standard_resolution',
-    template: '<div> <a href="{{link}}"> <img src="{{image}}" /></a></div>',
+    template: '<div><img src="{{image}}" /></div>',
     sortBy: 'most-recent',
     limit: 4,
     after: function() {
@@ -30,8 +30,8 @@
    });
          });
 </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/instafeed.min.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-</body>
+    </body>
 </html>
