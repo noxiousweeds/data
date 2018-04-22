@@ -8,7 +8,7 @@
 .buttons .button{background:#FFF;color:#2c3e50;float:left;margin:5px;}
 .center .slick-center h3{-moz-transform:scale(1.08);-ms-transform:scale(1.08);-o-transform:scale(1.08);-webkit-transform:scale(1.08);color:#e67e22;opacity:1;transform:scale(1.08);}
 .center h3{opacity:0.8;transition:all 300ms ease;}
-.content{margin:auto;padding:20px;width:600px;}
+.content{margin:auto;padding:5px;width:600px;}
 .content:after,.buttons::after{clear:both;content:"";display:table;}
 .destroy{font-weight:400;margin-top:40px;}
 .features{display:block;list-style-type:none;margin-top:30px;padding:0;text-align:center;}
@@ -27,7 +27,7 @@
 .slick-slide .image{padding:10px;}
 .slick-slide img{border:5px solid #FFF;display:block;width:100%;}
 .slick-slide img.slick-loading{border:0 }
-.slick-slider{margin:30px auto 50px;}
+.slick-slider{margin:15px auto 25px;}
 .subheading{color:#555;font-size:12px;font-style:italic;font-weight:400;margin:10px auto;text-align:center;}
 .white{background:#fff;color:#2c3e50;}
 .white pre,.white hr{background:#2c3e50 !important;}
