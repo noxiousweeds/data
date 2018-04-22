@@ -53,9 +53,11 @@
         resolution: 'standard_resolution',
         template: '<div><a href="{{link}}"><img src="{{image}}" /></a></div>',
         limit: 4,
-        after: function () {
+        after: window.onload=function () {
         $('.single-item').slick();
             autoplay: true
+            infinite: true
+            dots: true
     }
     });
 
