@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<div id="instafeed"></div>
+<div id="instafeed" class="slides"></div>
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -13,6 +13,7 @@
 <script type="text/javascript" src="slick/slick.min.js"></script>
 
  <script type="text/javascript">
+      $(document).ready(function(){
   var instafeed = new Instafeed({
     get: 'user',
 	userId: '5605056988',
@@ -24,13 +25,14 @@
     sortBy: 'most-recent',
     limit: 4,
     after: function() {
-      $('#instafeed').slick({
+      $('.slides').slick({
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4
       });
     }
    });
+          });
 </script>
     </body>
 </html>
